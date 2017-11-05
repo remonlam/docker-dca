@@ -1,4 +1,4 @@
-# Docker Docker Certified Associate (DCA) exam study guide
+# Docker Certified Associate (DCA) exam study guide
 
 Docker has become very popular over the last few years, unfortunately Docker only have official training did not have a certification track.
 Luckily for us this has changed last DockerCon EU 2017, during DockerCon you could be along the first people that could take the exam and get Docker certified.
