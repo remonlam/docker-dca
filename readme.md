@@ -25,7 +25,7 @@ There are 6 different topics that you need to know.
 
 - [Orchestration (25% of exam)](./orchestration.md)<br>
 - [Image Creation, Management, and Registry (20% of exam)](./images-management-registry.md)
-- Installation and Configuration (15% of exam)
-- Networking (15% of exam)
-- Security (15% of exam)
-- Storage and Volumes (10% of exam)
+- [Installation and Configuration (15% of exam)](./install-configuration.md)
+- [Networking (15% of exam)](./networking.md)
+- [Security (15% of exam)](./security)
+- [Storage and Volumes (10% of exam)](./storage-volumes.md)
