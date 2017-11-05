@@ -14,7 +14,7 @@ The exam (according to the Docker website) consist of 55 multiple choice questio
 Exam cost are about €175 or for friends in the US it's $195.
 
 On strange thing about taking the exam is that it's remotely proctored, so you don't go to a exam center to take the exam but you could do it from home.
-However it's only supported on a Mac or Windows machine, Linux is not supported.
+However it's only supported on a Mac or Windows machine, Linux is not supported.<br>
 Also make sure you have Google Chrome installed and be able to install the plugin that they use to monitor you remotely and of course you need to have a webcam so they can see you ;-).
 
 However once you completed the exam, you will get/see the results directly!
