@@ -1,6 +1,6 @@
 # Orchestration
 
-## Content may include the following:
+## This chapter consist of the following topics:
 - Complete the setup of a swarm mode cluster, with managers and worker nodes <br>
 - State the differences between running a container vs running a service <br>
 - Demonstrate steps to lock a swarm cluster <br>
