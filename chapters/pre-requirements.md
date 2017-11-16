@@ -37,6 +37,7 @@ $ docker-machine ls
 NAME   ACTIVE   DRIVER   STATE   URL   SWARM   DOCKER   ERRORS
 ```
 
+## Create new master VM;
 Next step is to create a new master instance, named 'master1';
 
 ```sh
