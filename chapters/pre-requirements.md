@@ -36,3 +36,9 @@ $ docker-machine ls
 
 NAME   ACTIVE   DRIVER   STATE   URL   SWARM   DOCKER   ERRORS
 ```
+
+Next step is to create a new master instance, named 'master1';
+
+```sh
+$ docker-machine create --driver virtualbox master1
+```
