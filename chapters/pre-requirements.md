@@ -40,7 +40,7 @@ NAME   ACTIVE   DRIVER   STATE   URL   SWARM   DOCKER   ERRORS
 ## Create new master VM;
 Next step is to create a new master instance, named 'master1';
 
-```bash
+```sh
 $ docker-machine create --driver virtualbox master1
 ...
 
@@ -65,4 +65,23 @@ Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: docker-machine env master1
 ```
 
-## Create
+## Create other Docker instances;
+Repeat the previous step for each of the following names: "master2", "worker1" and "worker2".
+
+When all instances has been successfully created the output of docker-machine should look like the following example;
+
+```sh
+$ docker-machine ls
+
+NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER        ERRORS
+master1   -        virtualbox   Running   tcp://192.168.99.100:2376           v17.10.0-ce   
+master2   -        virtualbox   Running   tcp://192.168.99.101:2376           v17.10.0-ce   
+worker1   -        virtualbox   Running   tcp://192.168.99.102:2376           v17.10.0-ce   
+worker2   -        virtualbox   Running   tcp://192.168.99.103:2376           v17.10.0-ce
+```
+
+## Access the VM's;
+In order to get console access the virtual machines we can use docker-machine ssh command, like the following example.
+
+```sh
+$ docker-machine ssh master1
