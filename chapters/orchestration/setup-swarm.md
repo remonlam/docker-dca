@@ -33,22 +33,23 @@ Example: "docker swarm init --advertise-addr <MANAGER1-IP>"
 $ docker swarm init --advertise-addr 192.168.99.100
 ``
 
-It should display something similar like this;
+It should display something similar like this;,<br>
 ``
 docker swarm init --advertise-addr 192.168.99.100
 
 
-Swarm initialized: current node (y7ah4hw3zqqrqtyobry897o1k) is now a manager.
+Swarm initialized: current node (y7ah4hw3zqqrqtyobry897o1k) is now a manager.<br>
 
-To add a worker to this swarm, run the following command:
+To add a worker to this swarm, run the following command:<br>
 
-    docker swarm join --token SWMTKN-1-1q7jja1jngryrtnsyk856g7z4658t24kjiv1751939uz22hfko-dk7um7zb6hzwiluzpovao84cy 192.168.99.100:2377
+    docker swarm join --token SWMTKN-1-1q7jja1jngryrtnsyk856g7z4658t24kjiv1751939uz22hfko-dk7um7zb6hzwiluzpovao84cy 192.168.99.100:2377<br>
 
-To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.<br>
 ``
 
 Make sure you copy the "docker swarm join" string.<br>
 Example: "docker swarm join --token SWMTKN-1-1q7jja1jngryrtnsyk856g7z4658t24kjiv1751939uz22hfko-dk7um7zb6hzwiluzpovao84cy 192.168.99.100:2377"
+
 # Add a second Swarm Manager
 
 
