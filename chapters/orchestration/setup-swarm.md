@@ -28,7 +28,7 @@ $ docker-machine ssh manager1
 
 
 Run the following command to create a new swarm;<br>
-Example: "docker swarm init --advertise-addr <MANAGER1-IP>"
+Example: "docker swarm init --advertise-addr <MANAGER1-IP>"<br>
 ``
 $ docker swarm init --advertise-addr 192.168.99.100
 ``
