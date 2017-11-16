@@ -17,24 +17,24 @@ If you use Docker Machine, you can connect to it via SSH using the following com
 ### Get IP of master1
 But the first step is to retrieve the IP address of master1;<br>
 Remember the IP (without the port number) of master1 you need it later on.<br>
-``
+```
 $ docker-machine ls | grep master1
-``
+```
 
 ### Connect with SSH to master1<br>
-``
+```
 $ docker-machine ssh manager1
-``
+```
 
 
 Run the following command to create a new swarm;<br>
 Example: "docker swarm init --advertise-addr <MANAGER1-IP>"<br>
-``
+```
 $ docker swarm init --advertise-addr 192.168.99.100
-``
+```
 
 It should display something similar like this;,<br>
-``
+```
 docker swarm init --advertise-addr 192.168.99.100
 
 
@@ -45,7 +45,7 @@ To add a worker to this swarm, run the following command:<br>
     docker swarm join --token SWMTKN-1-1q7jja1jngryrtnsyk856g7z4658t24kjiv1751939uz22hfko-dk7um7zb6hzwiluzpovao84cy 192.168.99.100:2377<br>
 
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.<br>
-``
+```
 
 Make sure you copy the "docker swarm join" string.<br>
 Example: "docker swarm join --token SWMTKN-1-1q7jja1jngryrtnsyk856g7z4658t24kjiv1751939uz22hfko-dk7um7zb6hzwiluzpovao84cy 192.168.99.100:2377"
