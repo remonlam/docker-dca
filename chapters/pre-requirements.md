@@ -40,7 +40,7 @@ NAME   ACTIVE   DRIVER   STATE   URL   SWARM   DOCKER   ERRORS
 ## Create new master VM;
 Next step is to create a new master instance, named 'master1';
 
-```sh
+```bash
 $ docker-machine create --driver virtualbox master1
 ...
 
@@ -65,4 +65,4 @@ Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: docker-machine env master1
 ```
 
-## Create 
+## Create
