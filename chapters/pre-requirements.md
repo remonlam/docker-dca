@@ -1,7 +1,7 @@
 # Setting up your lab environment
 
 ## What do we need to do;
-- [Install Docker for Mac](# Installing Docker)
+- [Installing Docker](# Installing Docker)
 - Create the first Swarm Manager
 - Add a second Swarm Manager
 - Add multiple Worker nodes
