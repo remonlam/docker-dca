@@ -6,3 +6,17 @@
 - Add a second Swarm Manager
 - Add multiple Worker nodes
 - What you have learned
+
+# Pre-requirements
+
+
+# Create the first Swarm Manager
+
+
+# Add a second Swarm Manager
+
+
+# Add multiple Worker Nodes
+
+
+# What you have learned
