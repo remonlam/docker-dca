@@ -85,3 +85,4 @@ In order to get console access the virtual machines we can use docker-machine ss
 
 ```sh
 $ docker-machine ssh master1
+```
