@@ -186,3 +186,4 @@ Okey so you now have a working Swarm cluster consist of 2 Manager nodes and 2 Wo
 - Retrieve the tokens for both the Managers and Workers
 - Add a second Swarm Manager node
 - Add Swarm Workers
+- Verify the node status
