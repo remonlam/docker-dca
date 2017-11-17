@@ -1,11 +1,11 @@
 # Demonstrate steps to lock a swarm cluster
 
 ## What do we need to do;
-- [Autolock](#Autolock)
+- [Autolock](#autolock)
 - Create the first Swarm Manager
 - Add a second Swarm Manager
 - Add multiple Worker nodes
-- [What you have learned](#What you have learned)
+- [What you have learned](#lessons-learned)
 
 
 # Autolock
