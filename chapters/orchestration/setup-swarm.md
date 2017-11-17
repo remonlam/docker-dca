@@ -111,7 +111,7 @@ $ docker swarm join --token SWMTKN-1-1q7jja1jngryrtnsyk856g7z4658t24kjiv1751939u
 This node joined a swarm as a worker.
 ```
 
-Right now the node have been added to the Docker Swarm, however it does not have the Manager role.
+Right now the node have been added to the Docker Swarm, however it does not have the Manager role.<br>
 To do so execute the following commands;
 
 ```
@@ -119,6 +119,70 @@ $ docker swarm SWMTKN-1-1q7jja1jngryrtnsyk856g7z4658t24kjiv1751939uz22hfko-dk7um
 ```
 
 # Add multiple Worker Nodes
+The next step is to add some workers do the Swarm cluster.<br>
+To do so we need to have the join-tokens from one of the masters.<br>
+
+If you do not have save it somewhere you need to go to one of the Manager nodes.
+```
+$ docker-machine ssh master2
+```
+
+The next step is to get the Swarm join token for Worker nodes.
+```
+$ docker swarm join-token worker
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-1q7jja1jngryrtnsyk856g7z4658t24kjiv1751939uz22hfko-dk7um7zb6hzwiluzpovao84cy 192.168.99.100:2377
+```
+
+### Add a Worker node
+Now we have the token we could add a Worker node to the Swarm cluster.
+```
+$ docker-machine ssh worker1
+```
+
+And run the join command that we just retrieved from master2
+```
+$ docker swarm join --token SWMTKN-1-1q7jja1jngryrtnsyk856g7z4658t24kjiv1751939uz22hfko-dk7um7zb6hzwiluzpovao84cy 192.168.99.100:2377
+```
+
+This should output something similar like this.
+```
+$ docker swarm join --token SWMTKN-1-1q7jja1jngryrtnsyk856g7z4658t24kjiv1751939uz22hfko-dk7um7zb6hzwiluzpovao84cy 192.168.99.100:2377
+This node joined a swarm as a worker.
+```
+
+Repeat this step for any remaining Worker nodes, like worker2.
+
+### Verify Swarm cluster
+Because we are on a Worker node we can't see or change the Docker Swarm configuration.<br>
+When running the command to show all the Swarm nodes it will give you a error like;
+```
+$ docker node ls
+Error response from daemon: This node is not a swarm manager. Worker nodes can't be used to view or modify cluster state. Please run this command on a manager node or promote the current node to a manager.
+```
+
+So once again we need to go to one of the two Master nodes.
+```
+$ docker-machine ssh master1
+```
+
+And execute the command to get the current node configuration.
+```
+$ docker node ls
+ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS
+y7ah4hw3zqqrqtyobry897o1k *   master1             Ready               Active              Leader
+8u4dvwd4uzvagl4viylzaaqw0     master2             Ready               Active              Reachable
+a920b1hvlwoznwywq6aekir8f     worker1             Ready               Active              
+g9pct1bk3gus13q0x7ql40fvw     worker2             Ready               Active              
+```
+
+You should see a total of 4 nodes, 2 of them have the Master role and the remaining have Worker roles.
 
 
-#What you have learned
+# Lessons learned
+Okey so you now have a working Swarm cluster consist of 2 Manager nodes and 2 Worker nodes, in a recap this is what we have learned.
+- Create the first Swarm Manager node
+- Retrieve the tokens for both the Managers and Workers
+- Add a second Swarm Manager node
+- Add Swarm Workers
