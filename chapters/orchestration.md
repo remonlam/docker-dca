@@ -1,7 +1,7 @@
 # Orchestration
 
 ## This chapter consist of the following topics:
-- [Complete the setup of a swarm mode cluster, with managers and worker nodes](./chapters/orchestration/setup-swarm.md) <br>
+- [Complete the setup of a swarm mode cluster, with managers and worker nodes](./orchestration/setup-swarm.md) <br>
 - State the differences between running a container vs running a service <br>
 - Demonstrate steps to lock a swarm cluster <br>
 - Extend the instructions to run individual containers into running services under swarm <br>
