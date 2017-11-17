@@ -8,7 +8,7 @@
 - What you have learned
 
 
-# Pre-requirements
+#Pre-requirements
 Follow [this guide](../pre-requirements.md) to setup the lab environment.
 
 
