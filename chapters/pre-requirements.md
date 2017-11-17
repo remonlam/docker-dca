@@ -31,16 +31,16 @@ Once VirtualBox has been installed we could check if docker-machine is able to c
 
 First check if there is already something running (this should not be the case)
 
-``sh
+```
 $ docker-machine ls
 
 NAME   ACTIVE   DRIVER   STATE   URL   SWARM   DOCKER   ERRORS
-``
+```
 
 ## Create new master VM;
 Next step is to create a new master instance, named 'master1';
 
-``sh
+```
 $ docker-machine create --driver virtualbox master1
 ...
 
@@ -63,14 +63,14 @@ Setting Docker configuration on the remote daemon...
 Checking connection to Docker...
 Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: docker-machine env master1
-``
+```
 
 ## Create other Docker instances;
 Repeat the previous step for each of the following names: "master2", "worker1" and "worker2".
 
 When all instances has been successfully created the output of docker-machine should look like the following example;
 
-``sh
+```
 $ docker-machine ls
 
 NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER        ERRORS
@@ -78,12 +78,12 @@ master1   -        virtualbox   Running   tcp://192.168.99.100:2376           v1
 master2   -        virtualbox   Running   tcp://192.168.99.101:2376           v17.10.0-ce   
 worker1   -        virtualbox   Running   tcp://192.168.99.102:2376           v17.10.0-ce   
 worker2   -        virtualbox   Running   tcp://192.168.99.103:2376           v17.10.0-ce
-``
+```
 
 ## Access the VM's;
 In order to get console access the virtual machines we can use docker-machine ssh command, like the following example.
 
-``sh
+```
 $ docker-machine ssh master1
 
                         ##         .
@@ -102,4 +102,4 @@ $ docker-machine ssh master1
 Boot2Docker version 17.10.0-ce, build HEAD : 34fe485 - Wed Oct 18 17:16:34 UTC 2017
 Docker version 17.10.0-ce, build f4ffd25
 docker@master1:~$
-``
+```
