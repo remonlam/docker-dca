@@ -11,8 +11,18 @@ They are purely based on the exam guidelines you can found in the chapters.
 # Some example questions
 
 
-### What is the preferred way of installing the Docker deamon
+### What is the preferred way of installing the Docker daemon?
 A - Using a package manger <br>
 B - It is already installed on the OS (Linux/Windows/Mac) <br>
 C - Download a tar file and extract it <br>
 D - All of the options are possible
+
+### What is a supported Windows version for running Docker?
+A - Windows 7 <br>
+B - Windows 8 <br>
+C - Windows 10 <br>
+D - Windows 2016 <br>
+E - Windows 2018 <br>
+F - All of the options are supported <br>
+
+###
