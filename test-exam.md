@@ -12,7 +12,7 @@ They are purely based on the exam guidelines you can found in the chapters.
 
 
 ### What is the preferred way of installing the Docker deamon
-A - Using a package manger
-B - It is already installed on the OS (Linux/Windows/Mac)
-C - Download a tar file and extract it
+A - Using a package manger <br>
+B - It is already installed on the OS (Linux/Windows/Mac) <br>
+C - Download a tar file and extract it <br>
 D - All of the options are possible
