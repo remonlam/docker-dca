@@ -8,7 +8,7 @@
 - Interpret the output of "docker inspect" commands <br>
 - Convert an application deployment into a stack file using a YAML compose file with "docker stack deploy" <br>
 - Manipulate a running stack of services <br>
-- Increase # of replicas <br>
+- [Increase # of replicas](./orchestration/increase-nr-of-replicas.md) <br>
 - Add networks, publish ports <br>
 - Mount volumes <br>
 - Illustrate running a replicated vs global service <br>
