@@ -1,7 +1,7 @@
 # Increase # of replicas
 
 ## What do we need to do;
-- [Autolock](#autolock)
+- [blabla](#autolock)
 - [Initialize a swarm with autolocking enabled](#initialize-a-swarm-with-autolocking-enabled)
 - [Enable or disable autolock on an existing swarm](#enable-or-disable-autolock-on-an-existing-swarm)
 - [Unlock a Swarm](#unlock-a-swarm)
