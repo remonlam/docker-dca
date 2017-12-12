@@ -4,7 +4,7 @@
 - Demonstrate the ability to upgrade the Docker engine
 - Complete setup of repo, select a storage driver, and complete installation of Docker engine on multiple platforms
 - Configure logging drivers (splunk, journald, etc)
-- Setup swarm, configure managers, add nodes, and setup backup schedule
+- [Setup swarm, configure managers, add nodes, and setup backup schedule](./install-config/setup-swarm-configure-managers-add-nodes-and-setup-backup-schedule)
 - Create and manager user and teams
 - Interpret errors to troubleshoot installation issues without assistance
 - Outline the sizing requirements prior to installation
