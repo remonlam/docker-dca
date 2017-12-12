@@ -37,21 +37,21 @@ $ docker-machine ls
 NAME   ACTIVE   DRIVER   STATE   URL   SWARM   DOCKER   ERRORS
 ```
 
-## Create new master VM;
-Next step is to create a new master instance, named 'master1';
+## Create new manager VM;
+Next step is to create a new manager instance, named 'manager1';
 
 ```
-$ docker-machine create --driver virtualbox master1
+$ docker-machine create --driver virtualbox manager1
 ...
 
 Running pre-create checks...
 Creating machine...
-(master1) Copying /Users/user/.docker/machine/cache/boot2docker.iso to /Users/user/.docker/machine/machines/master1/boot2docker.iso...
-(master1) Creating VirtualBox VM...
-(master1) Creating SSH key...
-(master1) Starting the VM...
-(master1) Check network to re-create if needed...
-(master1) Waiting for an IP...
+(manager1) Copying /Users/user/.docker/machine/cache/boot2docker.iso to /Users/user/.docker/machine/machines/manager1/boot2docker.iso...
+(manager1) Creating VirtualBox VM...
+(manager1) Creating SSH key...
+(manager1) Starting the VM...
+(manager1) Check network to re-create if needed...
+(manager1) Waiting for an IP...
 Waiting for machine to be running, this may take a few minutes...
 Detecting operating system of created instance...
 Waiting for SSH to be available...
@@ -62,11 +62,11 @@ Copying certs to the remote machine...
 Setting Docker configuration on the remote daemon...
 Checking connection to Docker...
 Docker is up and running!
-To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: docker-machine env master1
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: docker-machine env manager1
 ```
 
 ## Create other Docker instances;
-Repeat the previous step for each of the following names: "master2", "worker1" and "worker2".
+Repeat the previous step for each of the following names: "manager2", "worker1" and "worker2".
 
 When all instances has been successfully created the output of docker-machine should look like the following example;
 
@@ -74,8 +74,8 @@ When all instances has been successfully created the output of docker-machine sh
 $ docker-machine ls
 
 NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER        ERRORS
-master1   -        virtualbox   Running   tcp://192.168.99.100:2376           v17.10.0-ce   
-master2   -        virtualbox   Running   tcp://192.168.99.101:2376           v17.10.0-ce   
+manager1   -        virtualbox   Running   tcp://192.168.99.100:2376           v17.10.0-ce   
+manager2   -        virtualbox   Running   tcp://192.168.99.101:2376           v17.10.0-ce   
 worker1   -        virtualbox   Running   tcp://192.168.99.102:2376           v17.10.0-ce   
 worker2   -        virtualbox   Running   tcp://192.168.99.103:2376           v17.10.0-ce
 ```
@@ -84,7 +84,7 @@ worker2   -        virtualbox   Running   tcp://192.168.99.103:2376           v1
 In order to get console access the virtual machines we can use docker-machine ssh command, like the following example.
 
 ```
-$ docker-machine ssh master1
+$ docker-machine ssh manager1
 
                         ##         .
                   ## ## ##        ==
@@ -101,5 +101,5 @@ $ docker-machine ssh master1
 |_.__/ \___/ \___/ \__|_____\__,_|\___/ \___|_|\_\___|_|
 Boot2Docker version 17.10.0-ce, build HEAD : 34fe485 - Wed Oct 18 17:16:34 UTC 2017
 Docker version 17.10.0-ce, build f4ffd25
-docker@master1:~$
+docker@manager1:~$
 ```
