@@ -171,8 +171,8 @@ And execute the command to get the current node configuration.
 ```
 $ docker node ls
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS
-y7ah4hw3zqqrqtyobry897o1k *   manager1             Ready               Active              Leader
-8u4dvwd4uzvagl4viylzaaqw0     manager2             Ready               Active              Reachable
+y7ah4hw3zqqrqtyobry897o1k *   manager1            Ready               Active              Leader
+8u4dvwd4uzvagl4viylzaaqw0     manager2            Ready               Active              Reachable
 a920b1hvlwoznwywq6aekir8f     worker1             Ready               Active              
 g9pct1bk3gus13q0x7ql40fvw     worker2             Ready               Active              
 ```
