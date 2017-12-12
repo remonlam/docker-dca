@@ -1,7 +1,7 @@
 # Image Creation, Management, and Registry
 
 ## This chapter consist of the following topics:
-- Describe Dockerfile options [add, copy, volumes, expose, entrypoint, etc)
+- Describe Dockerfile options (add, copy, volumes, expose, entrypoint, etc)
 - Show the main parts of a Dockerfile
 - Give examples on how to create an efficient image via a Dockerfile
 - Use CLI commands such as list, delete, prune, rmi, etc to manage images
