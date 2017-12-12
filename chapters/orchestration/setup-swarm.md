@@ -16,14 +16,14 @@ Follow [this guide](../pre-requirements.md) to setup the lab environment.
 Open a terminal and ssh into the machine where you want to run your manager node. This tutorial uses a machine named manager1.<br>
 If you use Docker Machine, you can connect to it via SSH using the following command;
 
-### Get IP of master1
-But the first step is to retrieve the IP address of master1;<br>
-Remember the IP (without the port number) of master1 you need it later on.<br>
+### Get IP of manager1
+But the first step is to retrieve the IP address of manager1;<br>
+Remember the IP (without the port number) of manager1 you need it later on.<br>
 ```
-$ docker-machine ls | grep master1
+$ docker-machine ls | grep manager1
 ```
 
-### Connect with SSH to master1
+### Connect with SSH to manager1
 ```
 $ docker-machine ssh manager1
 ```
@@ -76,7 +76,7 @@ NOTE: tokens for Manager & Workers are different!
 
 
 ### Verify node config
-Verify that the node has been configured as master.
+Verify that the node has been configured as manager.
 ```
 $ docker node ls
 ```
@@ -86,16 +86,16 @@ It should output something like the following example;
 $ docker node ls
 
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS
-y7ah4hw3zqqrqtyobry897o1k *   master1             Ready               Active              Leader
+y7ah4hw3zqqrqtyobry897o1k *   manager1             Ready               Active              Leader
 ```
 
 
 # Add a second Swarm Manager
-The first master has been configured now it's time configure the second master node.<br>
-NOTE: For production use alsways use at least 3 Swarm Managers for redundancy, 2 Master nodes won't give you any failover capacity.<br>
+The first manager has been configured now it's time configure the second manager node.<br>
+NOTE: For production use alsways use at least 3 Swarm Managers for redundancy, 2 manager nodes won't give you any failover capacity.<br>
       Please read this guid for more information regarding Swarm Manager HA setup.
 
-### Connect with SSH to master2
+### Connect with SSH to manager2
 ```
 $ docker-machine ssh manager2
 ```
@@ -120,11 +120,11 @@ $ docker swarm SWMTKN-1-1q7jja1jngryrtnsyk856g7z4658t24kjiv1751939uz22hfko-dk7um
 
 # Add multiple Worker Nodes
 The next step is to add some workers do the Swarm cluster.<br>
-To do so we need to have the join-tokens from one of the masters.<br>
+To do so we need to have the join-tokens from one of the managers.<br>
 
 If you do not have save it somewhere you need to go to one of the Manager nodes.
 ```
-$ docker-machine ssh master2
+$ docker-machine ssh manager2
 ```
 
 The next step is to get the Swarm join token for Worker nodes.
@@ -141,7 +141,7 @@ Now we have the token we could add a Worker node to the Swarm cluster.
 $ docker-machine ssh worker1
 ```
 
-And run the join command that we just retrieved from master2
+And run the join command that we just retrieved from manager2
 ```
 $ docker swarm join --token SWMTKN-1-1q7jja1jngryrtnsyk856g7z4658t24kjiv1751939uz22hfko-dk7um7zb6hzwiluzpovao84cy 192.168.99.100:2377
 ```
@@ -162,22 +162,22 @@ $ docker node ls
 Error response from daemon: This node is not a swarm manager. Worker nodes can't be used to view or modify cluster state. Please run this command on a manager node or promote the current node to a manager.
 ```
 
-So once again we need to go to one of the two Master nodes.
+So once again we need to go to one of the two manager nodes.
 ```
-$ docker-machine ssh master1
+$ docker-machine ssh manager1
 ```
 
 And execute the command to get the current node configuration.
 ```
 $ docker node ls
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS
-y7ah4hw3zqqrqtyobry897o1k *   master1             Ready               Active              Leader
-8u4dvwd4uzvagl4viylzaaqw0     master2             Ready               Active              Reachable
+y7ah4hw3zqqrqtyobry897o1k *   manager1             Ready               Active              Leader
+8u4dvwd4uzvagl4viylzaaqw0     manager2             Ready               Active              Reachable
 a920b1hvlwoznwywq6aekir8f     worker1             Ready               Active              
 g9pct1bk3gus13q0x7ql40fvw     worker2             Ready               Active              
 ```
 
-You should see a total of 4 nodes, 2 of them have the Master role and the remaining have Worker roles.
+You should see a total of 4 nodes, 2 of them have the manager role and the remaining have Worker roles.
 
 
 # Lessons learned
