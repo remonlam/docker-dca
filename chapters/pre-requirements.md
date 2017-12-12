@@ -74,8 +74,8 @@ When all instances has been successfully created the output of docker-machine sh
 $ docker-machine ls
 
 NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER        ERRORS
-manager1   -        virtualbox   Running   tcp://192.168.99.100:2376           v17.10.0-ce   
-manager2   -        virtualbox   Running   tcp://192.168.99.101:2376           v17.10.0-ce   
+manager1  -        virtualbox   Running   tcp://192.168.99.100:2376           v17.10.0-ce   
+manager2  -        virtualbox   Running   tcp://192.168.99.101:2376           v17.10.0-ce   
 worker1   -        virtualbox   Running   tcp://192.168.99.102:2376           v17.10.0-ce   
 worker2   -        virtualbox   Running   tcp://192.168.99.103:2376           v17.10.0-ce
 ```
