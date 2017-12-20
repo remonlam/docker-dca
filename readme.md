@@ -23,8 +23,8 @@ However once you completed the exam, you will get/see the results directly!
 ## What topics do I need to know
 There are 6 different topics that you need to know.
 
-- [Installation and Configuration (15% of exam)](./chapters/installation-configuration.md)
 - [Orchestration (25% of exam)](./chapters/orchestration.md)
+- [Installation and Configuration (15% of exam)](./chapters/installation-configuration.md)
 - [Image Creation, Management, and Registry (20% of exam)](./chapters/images-management-registry.md)
 - [Storage and Volumes (10% of exam)](./chapters/storage-volumes.md)
 - [Networking (15% of exam)](./chapters/networking.md)
