@@ -8,3 +8,7 @@
 - [View the current unlock key for a running swarm](#view-the-current-unlock-key-for-a-running-swarm)
 - [Rotate the unlock key](#rotate-the-unlock-key)
 - [What you have learned](#lessons-learned)
+
+docker service ps demoapp
+
+docker service scale demoapp=4
