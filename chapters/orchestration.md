@@ -4,7 +4,7 @@
 - [Complete the setup of a swarm mode cluster, with managers and worker nodes](./orchestration/setup-swarm.md)
 - [State the differences between running a container vs running a service](./orchestration/diff-running-container-vs-service.md)
 - [Demonstrate steps to lock a swarm cluster](./orchestration/lock-a-swarm-cluster.md)
-- [Extend the instructions to run individual containers into running services under swarm](.orchestration/extend-the-instructions-to-run-individual-containers-into-running-services-under-swarm.md)
+- [Extend the instructions to run individual containers into running services under swarm](./orchestration/extend-the-instructions-to-run-individual-containers-into-running-services-under-swarm.md)
 - [Interpret the output of "docker inspect" commands](./orchestration/interpret-the-output-of-docker-inspect-commands.md)
 - Convert an application deployment into a stack file using a YAML compose file with "docker stack deploy"
 - Manipulate a running stack of services
