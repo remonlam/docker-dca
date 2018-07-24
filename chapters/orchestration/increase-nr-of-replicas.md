@@ -1,5 +1,6 @@
 # Increase # of replicas
 
+# [!! work in progress !!]
 ## What do we need to do;
 - [blabla](#autolock)
 - [Initialize a swarm with autolocking enabled](#initialize-a-swarm-with-autolocking-enabled)
